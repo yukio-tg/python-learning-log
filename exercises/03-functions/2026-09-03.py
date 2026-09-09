@@ -37,7 +37,7 @@ print(calcular_dano(ataques2,defesa2))
 
 """
 
-# DESAFIO 3, 4, 5
+# DESAFIO 3, 4, 5, 6, 7, 8
 
 
 def maior_nivel(personagens):
@@ -85,11 +85,8 @@ def avaliar_grupo(personagens, nivel_minimo):
     return resultado
 
 def distribuir_xp(personagens, xp):
-    if personagens:
-        for personagem in personagens:
-            personagem["xp"] = xp * personagem["nivel"]
-
-        return personagens
+    for personagem in personagens:
+        personagem["xp"] = xp * personagem["nivel"]
 
 personagens = [
     {"nome": "Aldren", "vida": 70, "nivel": 6},
