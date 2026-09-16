@@ -107,14 +107,14 @@ Se os dois usuários possuem pelo menos uma permissão em comum.
 Se os dois usuários possuem exatamente as mesmas permissões.
 '''
 
-print(f"Todas:\n{usuario_a or usuario_b}\n")
+print(f"Todas:\n{usuario_a.union(usuario_b)}\n")
 print(f"Ambos:\n{usuario_a.intersection(usuario_b)}\n")
 print(f"Exclusivas do usuário A:\n{usuario_a - usuario_b}\n")
 print(f"Exclusivas do usuário B:\n{usuario_b - usuario_a}\n")
 print(f"Somente um:\n{usuario_a ^ usuario_b}\n")
 
 print("Possuem algo em comum?")
-if usuario_a and usuario_b : print(f"Sim\n")
+if usuario_a.intersection(usuario_b) : print(f"Sim\n")
 else : print(f"Não\n")
 
 print("Possuem exatamente as mesmas permissões?")
